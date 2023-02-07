@@ -11,6 +11,11 @@ example_data = [
     {'name': 'Sliced orange', 'source': 'orange.jpg'}
 ]
 
+
+@app.route('/')
+def hello_world():
+   return "Hello, World!"
+
 #Function search() is associated with the address base URL + "/search"
 @app.route('/search')
 def search():
