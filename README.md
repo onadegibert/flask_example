@@ -61,10 +61,11 @@ pip install Flask
 
 __NOTE:__ Make sure you are in your `myproject` directory.
 
-Clone this git repository and move it:
+Clone this git repository and move it (just use one of the options below!):
 
 ```
-git clone https://github.com/jrvc/flask_example
+git clone git@github.com:jrvc/flask_example.git # ssh cloning
+git clone https://github.com/jrvc/flask_example # https cloning
 cd flask_example
 ```
 
