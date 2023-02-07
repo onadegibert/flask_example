@@ -2,7 +2,7 @@
 
 We will use a virtual environment to contain the project. This way, if you want to export the codebase to a different machine you just have to follow the same instructions to avoid version control problems. If you want to know more about virtual environments and good practices read [this entry](https://docs.python-guide.org/dev/virtualenvs/) - it will save you a lot of headaches...
 
-## [Install Flask](http://flask.pocoo.org/docs/1.0/installation/)
+## [Install Flask](https://flask.palletsprojects.com/en/2.2.x/installation/)
 
 (NOTE: Instructions for Windows users after this) 
 Create a project directory:
@@ -122,3 +122,9 @@ flask run
 
 and __in your browser__ go to `localhost:8000/search` to see the website.
 
+__Note:__ If you forget the `/search` you'll only find a minimal Flask application that contains a single function hello_world that is triggered when the route `/` is requested. When it runs, this application binds to all IPs on the system (“0.0.0.0”) and listens on port 8000, which is the one we set.
+
+
+
+## Acknowledgements
+Thanks to [Mikko Aulamo](https://researchportal.helsinki.fi/en/persons/mikko-aulamo) for creating the first version of this repo.
