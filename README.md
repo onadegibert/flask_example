@@ -120,5 +120,5 @@ So, run the app:
 flask run
 ```
 
-and __in yous browser__ go to `localhost:8000/search` to see the website.
+and __in your browser__ go to `localhost:8000/search` to see the website.
 
