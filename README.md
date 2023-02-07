@@ -65,7 +65,7 @@ Clone this git repository and move it:
 
 ```
 git clone https://github.com/jrvc/flask_example
-cd flask-example
+cd flask_example
 ```
 
 The `flask_demo.py` file is the application's root. This is where all the Flask application goodness will go.  We create an environment variable that points to that file by setting the following environment variables. For your project you can set up that environment variable in your environment's activate script.
