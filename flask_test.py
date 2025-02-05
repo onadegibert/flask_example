@@ -44,17 +44,15 @@ def process():
     return f"You entered: {text}"
 
 # 4. Teaching GET vs. POST with Different Routes
-@app.route('/welcome_post', methods=['POST'])
+@app.route('/welcome_post')
 def welcome_post():
     """Demonstrates POST-only route (Expecting form data)"""
-    text = request.form.get("user_input", "No data provided")
-    return f"Welcome (POST): {text}"
+    return render_template("welcome_post.html")
 
-@app.route('/welcome_get', methods=['GET'])
+@app.route('/welcome_get')
 def welcome_get():
     """Demonstrates GET-only route (Expecting URL parameters)"""
-    text = request.args.get("user_input", "No data provided")
-    return f"Welcome (GET): {text}"
+    return render_template("welcome_get.html")
 
 # 5. Dynamic Routes (Extracting Data from URL)
 @app.route('/user/<username>') 
