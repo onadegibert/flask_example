@@ -1,0 +1,9 @@
+<h1>🎲 Random Name Shuffler 🎲</h1>
+<p>Enter names (comma-separated) and click "Shuffle"</p>
+
+<form action="/shuffle" id="shuffle-form">
+    <textarea name="names" id="names-input" placeholder="Enter names separated by commas" rows="10" cols="50"></textarea><br><br>
+    <button type="submit">Shuffle</button>
+</form>
+
+{{ shuffled_names }}

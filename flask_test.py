@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import random
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -61,6 +62,27 @@ def show_user(username):
     """Greet the user based on the URL parameter"""
     return f'Hello, {username}!'
 
-# 6. Running the Flask App
+with open("templates/random_generator.html", "r") as file:
+    html_template = file.read()
+    
+# 6. Random order generator of unordered list
+@app.route("/shuffle", methods=["GET"])
+def shuffle_names():
+    shuffled_names_html = ""
+
+    names = request.args.get("names", "")
+    
+    if names != "":
+        name_list = [name.strip() for name in names.split(",") if name.strip()]
+        random.shuffle(name_list)
+        shuffled_names_html = "<h2>🔀 Shuffled Order 🔀</h2><ul>"
+        shuffled_names_html += "".join(f"<li>{name}</li>" for name in name_list)
+        shuffled_names_html += "</ul>"
+    
+    print(shuffled_names_html)
+    
+    return html_template.replace("{{ shuffled_names }}", shuffled_names_html)
+
+# Running the Flask App
 if __name__ == "__main__":
     app.run(debug=True)
