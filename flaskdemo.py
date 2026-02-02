@@ -33,7 +33,7 @@ def search():
             #If an entry name contains the query, add the entry to matches
             if query.lower() in entry['name'].lower():
                 matches.append(entry)
-
+        print(matches)
     #Render index.html with matches variable
     return render_template('index.html', matches=matches)
 

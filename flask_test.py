@@ -15,6 +15,11 @@ def about():
     """About Page - Simple text explaining the app"""
     return "This is a Flask-powered NLP app."
 
+@app.route('/nlp-apps')
+def nlp_apps():
+    """About Page - Simple text explaining the app"""
+    return "NLP apps are so cool."
+
 # 2. Rendering HTML Pages
 @app.route('/welcome')
 def welcome():
@@ -34,7 +39,7 @@ def process():
 
     if request.method == 'POST':
         text = request.form.get("user_input")  # Safer way to access form data
-    else:
+    else: # if the method is GET
         text = request.args.get("user_input")  # Extract query parameter from URL
     
     # Handle case where no input is provided
@@ -44,17 +49,15 @@ def process():
     return f"You entered: {text}"
 
 # 4. Teaching GET vs. POST with Different Routes
-@app.route('/welcome_post', methods=['POST'])
+@app.route('/welcome_post')
 def welcome_post():
     """Demonstrates POST-only route (Expecting form data)"""
-    text = request.form.get("user_input", "No data provided")
-    return f"Welcome (POST): {text}"
+    return render_template("welcome_post.html")
 
-@app.route('/welcome_get', methods=['GET'])
+@app.route('/welcome_get')
 def welcome_get():
     """Demonstrates GET-only route (Expecting URL parameters)"""
-    text = request.args.get("user_input", "No data provided")
-    return f"Welcome (GET): {text}"
+    return render_template("welcome_get.html")
 
 # 5. Dynamic Routes (Extracting Data from URL)
 @app.route('/user/<username>') 
