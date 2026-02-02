@@ -64,8 +64,8 @@ __NOTE:__ Make sure you are in your `myproject` directory.
 Clone this git repository and move it (just use one of the options below!):
 
 ```
-git clone git@github.com:jrvc/flask_example.git # ssh cloning
-git clone https://github.com/jrvc/flask_example # https cloning
+git clone git@github.com:onadegibert/flask_example.git # ssh cloning
+git clone https://github.com/onadegibert/flask_example # https cloning
 cd flask_example
 ```
 
@@ -128,4 +128,4 @@ __Note:__ If you forget the `/search` you'll only find a minimal Flask applicati
 
 
 ## Acknowledgements
-Thanks to [Mikko Aulamo](https://researchportal.helsinki.fi/en/persons/mikko-aulamo) for creating the first version of this repo.
+Thanks to [Mikko Aulamo](https://researchportal.helsinki.fi/en/persons/mikko-aulamo) for creating the first version of this repo. Thanks to [Raul Vazquez](https://researchportal.helsinki.fi/en/persons/raul-vazquez/) for creating the second version of this repo.
